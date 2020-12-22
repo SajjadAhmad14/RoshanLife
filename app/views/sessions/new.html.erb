@@ -1,0 +1,7 @@
+<%= form_with(model: @user, local: true, class: 'col-5 container form-container bg-info')  do |f|%>
+  <div class="mb-3">
+    <%= f.label :name, class: "form-label" %><br>
+    <%= f.text_field :name, class: "form-control" %><br>    
+  </div>
+  <%= submit_tag %>
+<% end %>
