@@ -8,21 +8,27 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
-        <div>
-        <a class="navbar-brand">Navbar</a>
-        <a class="navbar-brand">Navbar</a>
-        <a class="navbar-brand">Navbar</a>
-        <a class="navbar-brand">Navbar</a>
-        </div>
-        <div>
-        <a class="navbar-brand">Navbar</a>
-        <a class="navbar-brand">Navbar</a>
-        </div>
-      </div>
-    </nav>
-    <%= yield %>
-  </body>
-</html>
+    <nav>
+      <ul class = "nav-main">
+        <li>
+          <a href = '#'>Navbrand</a>
+        </li>
+        <li>
+          <a href = '#' class = 'active'>HOME</a>
+          <a href = '#'>FASION</a>
+          <a href = '#'>BUSINESS</a>
+          <a href = '#'>SPORTS</a>
+          <a href = '#'>ENTERTAINMENT</a>
+          <a href = '#'>MAGAZINE</a>
+          <a href = '#'>TV</a>
+        </li>
+        <li>
+          <%= link_to 'LOGIN', login_path %> |
+          <a href = '#'>REGISTER</a>
+          <a href = '#'>Navbrand</a>
+        </li>
+        <ul>
+        </nav>
+        <%= yield %>
+      </body>
+    </html>

@@ -1,1 +1,37 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.nav-main {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  list-style-type: none;
+  padding: 20px 0 20px 50px;
+}
+
+.nav-main a {
+  padding: 10px;
+  color: #c0c0c0;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.nav-main .active, a:active {
+  color: #f36f21;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
