@@ -17,6 +17,7 @@ body {
   align-items: center;
   list-style-type: none;
   padding: 20px 0 20px 50px;
+  white-space: nowrap;
 }
 
 .nav-main a {
@@ -34,4 +35,20 @@ body {
   display: flex;
   align-items: center;
   height: 50vh;
+}
+
+.form-container {
+  padding: 100px;
+}
+
+.form-container input[type="text"] {
+  margin-bottom: -30px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.form-container input[type="submit"] {
+  width: fit-content;
+  margin-left: 100px;
 }
