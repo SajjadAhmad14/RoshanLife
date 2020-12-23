@@ -4,6 +4,7 @@
     <title>RoshanLife</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/a0d360eeab.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -11,7 +12,7 @@
     <nav>
       <ul class = "nav-main">
         <li>
-          <a href = '#'>Navbrand</a>
+          <a href = "#"><%= image_tag "my_logo1.jpg" %></a>
         </li>
         <li>
           <a href = '#' class = 'active'>HOME</a>
@@ -25,7 +26,7 @@
         <li>
           <%= link_to 'LOGIN', login_path %> |
           <%= link_to 'REGISTER', new_user_path %>
-          <a href = '#'>Navbrand</a>
+          <a href = '#'><i class="fas fa-search"></i></a>
         </li>
         <ul>
         </nav>
