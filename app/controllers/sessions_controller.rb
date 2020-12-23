@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:session][:name].downcase)
     if user
       session[:user_id] = user.id
-      redirect_to user
+      redirect_to root_path
     else
       flash.now[:error] = 'User does not exist. You need to sign up!'
       render 'new'

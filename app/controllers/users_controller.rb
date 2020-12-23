@@ -4,10 +4,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.find_or_create_by(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to root_path
     else
       flash.now[:errors] = @user.errors.full_messages
       render 'new'

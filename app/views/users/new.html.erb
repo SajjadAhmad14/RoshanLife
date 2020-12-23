@@ -1,0 +1,9 @@
+  <div class = 'flex-container'>
+    <%= form_with(model: @user, class: 'col-5 container form-container bg-success', local: true) do |f|%>
+      <%= f.label :name, class: 'font-weight-bolder align-middle'%>
+      <%= f.text_field :name%><br>
+      <div class = 'd-flex justify-content-center'>
+        <%= f.submit "Register", class: 'btn btn-primary mt-3 ml-3 font-weight:bolder' %>
+      </div>
+    <% end %>
+  <div>
