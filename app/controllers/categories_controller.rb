@@ -4,6 +4,19 @@ class CategoriesController < ApplicationController
   end
 
   def create
+    @category = Category.new(categrory_params)
+    if @category.save
+      flash[:notice] = 'Category created successfully!'
+    else
+      flash[:notice] = @category.errors.full_messages
+      render 'new'
+    end
+  end
 
+  private
+
+  def categrory_params
+    params.require(:category).permit(:name)
   end
 end
+

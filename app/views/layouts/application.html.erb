@@ -30,6 +30,9 @@
         </li>
         <ul>
         </nav>
+        <% flash.each do |key, msg| %>
+          <%= msg %>
+        <% end %>
         <%= yield %>
       </body>
     </html>
