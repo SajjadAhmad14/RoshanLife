@@ -1,0 +1,21 @@
+<nav>
+  <ul class = "nav-main">
+    <li>
+      <a href = "#"><%= image_tag "my_logo1.jpg" %></a>
+    </li>
+    <li>
+      <a href = '#' class = 'active'>HOME</a>
+      <a href = '#'>FASION</a>
+      <a href = '#'>BUSINESS</a>
+      <a href = '#'>SPORTS</a>
+      <a href = '#'>ENTERTAINMENT</a>
+      <a href = '#'>MAGAZINE</a>
+      <a href = '#'>TV</a>
+    </li>
+    <li>
+      <%= link_to 'LOGIN', login_path %> |
+      <%= link_to 'REGISTER', new_user_path %>
+      <a href = '#'><i class="fas fa-search"></i></a>
+    </li>
+    <ul>
+    </nav>
