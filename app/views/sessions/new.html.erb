@@ -1,9 +1,18 @@
-<div class = 'flex-container'>
-  <%= form_with scope: :session, local: true, class: 'col-5 container form-container bg-info' do |f| %>
-      <%= f.label :name, class:'font-weight-bolder align-middle'%>
-      <%= f.text_field :name %><br>
-      <div class = 'd-flex justify-content-center'>
-    <%= f.submit "Log In", class: 'btn btn-primary mt-3 ml-3 font-weight:bolder' %>
+<h1 class = 'text-center mt-4'>Log In</h1>
+<div class = 'container'>
+  <div class = 'row justify-content-center'>
+    <div class = 'col-10'>
+      <%= form_with scope: :session, local: true, class: 'shadow p-3 mb-3 bg-info rounded' do |f|%>
+        <div class = 'form-group row'>
+          <%= f.label :name, 'User Name', class: 'col-2 col-form-label text-light'%>
+          <div class = 'col-10'>
+            <%= f.text_field :name, class: 'form-control shadow rounded', placeholder: 'Enter your name'%>
+          </div>
+        </div>
+        <div class = 'form-group row justify-content-center'>
+          <%= f.submit class: 'btn btn-outline-light btn-lg' %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
