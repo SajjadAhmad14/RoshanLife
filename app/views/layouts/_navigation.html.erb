@@ -13,8 +13,14 @@
       <a href = '#'>TV</a>
     </li>
     <li>
+    <% unless loged_in? %>
       <%= link_to 'LOGIN', login_path %> |
       <%= link_to 'REGISTER', new_user_path %>
+      <% end %>
+    <% if loged_in? %>
+    <a href = '#'>CREATE ARTICLE</a> |
+    <%= link_to 'LOGOUT', logout_path, :method => :delete %>
+    <% end %>
       <a href = '#'><i class="fas fa-search"></i></a>
     </li>
     <ul>
