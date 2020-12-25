@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
   end
 
   def article_max
-    Article.order('votes_coun
-      t desc').limit(1)
+  Article.order('votes_count desc').limit(1)
   end
 end
