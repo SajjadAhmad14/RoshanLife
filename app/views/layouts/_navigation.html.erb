@@ -21,7 +21,7 @@
         <% if current_user.admin? %>
           <%= link_to 'CREATE CATEGORY', new_category_path %> |
         <% else  %>
-          <a href = '#'>CREATE ARTICLE</a> |
+          <%= link_to 'CREATE ARTICLE', new_article_path %> |
         <% end %>
         <%= link_to 'LOGOUT', logout_path, :method => :delete %>
       <% end %>

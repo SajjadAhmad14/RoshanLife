@@ -31,25 +31,7 @@ body {
   color: #f36f21;
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-  height: 50vh;
-}
-
-.form-container {
-  padding: 100px;
-  border-radius: 5px;
-}
-
-.form-container input[type="text"] {
-  margin-bottom: -30px;
-  height: 50px;
-  font-size: 20px;
-  font-weight: bolder;
-}
-
-.form-container input[type="submit"] {
-  width: fit-content;
-  margin-left: 100px;
+form select, form file {
+  width: 100%;
+  outline: none;
 }
