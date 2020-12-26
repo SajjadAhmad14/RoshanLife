@@ -14,6 +14,11 @@ class CategoriesController < ApplicationController
       render 'new'
     end
   end
+  
+  def show
+    @category = Catetory.includes(:articles).find(params[:id])
+    @articles = @category.articles
+  end
 
   private
 
