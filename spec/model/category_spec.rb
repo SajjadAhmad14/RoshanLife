@@ -6,6 +6,12 @@ RSpec.describe Category, :type => :model do
     expect(@category).to be_valid
   end
 
+  it 'Category name should be unique' do
+    @category = Category.create(name: 'abc')
+    @category1 = Category.create(name: 'abc')
+    expect(@category1).to_not be_valid
+  end
+
   it 'Category is not valid without name attribute' do
     @category = Category.new(name: nil)
     expect(@category).to_not be_valid
