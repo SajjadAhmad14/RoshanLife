@@ -9,8 +9,7 @@
       <a href = '#'>BUSINESS</a>
       <a href = '#'>SPORTS</a>
       <a href = '#'>ENTERTAINMENT</a>
-      <a href = '#'>MAGAZINE</a>
-      <a href = '#'>TV</a>
+      
     </li>
     <li>
       <% unless logged_in? %>
@@ -25,7 +24,6 @@
         <% end %>
         <%= link_to 'LOGOUT', logout_path, :method => :delete %>
       <% end %>
-      <a href = '#'><i class="fas fa-search"></i></a>
     </li>
     <ul>
     </nav>
