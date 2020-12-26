@@ -41,6 +41,7 @@ form select, form file {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-bottom: 0;
   
 }
 
@@ -50,3 +51,24 @@ form select, form file {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.grid-container {
+  display: grid;
+  grid-gap: 1px;
+  color: #444;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  padding: 20px;
+  font-size: 150%;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
