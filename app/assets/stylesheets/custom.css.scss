@@ -37,7 +37,11 @@ body {
 
 form select, form file {
   width: 100%;
-  outline: none;
+}
+
+.sign-up, .log-in {
+  height: 70vh;
+  margin-top: 90px;
 }
 
 .jumbotron {
@@ -47,6 +51,12 @@ form select, form file {
   background-position: center;
   margin-bottom: 0;
   
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+
 }
 
 .background {
@@ -75,3 +85,21 @@ form select, form file {
 
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4e443e;
+  color: #fff;
+}
+
+footer span {
+  color: #fa6000;
+}
+
+.fab {
+  background-color: #fa6000;
+  color: #4e443e;
+  padding: 5px;
+  border-radius: 20px;
+}
