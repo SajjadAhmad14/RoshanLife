@@ -1,14 +1,21 @@
 <nav>
   <ul class = "nav-main">
     <li>
-      <a href = "#"><%= image_tag "my_logo1.jpg" %></a>
+      <%= link_to root_path, class: "ml-lg-5" do %>
+      <%= image_tag "my_logo1.jpg" %>
+      <% end %>
     </li>
     <li>
-      <%= link_to "HOME", {controller: "pages", action: "home"}, class: "active" %>
-      <a href = '#'>FASION</a>
-      <a href = '#'>BUSINESS</a>
-      <a href = '#'>SPORTS</a>
-      <a href = '#'>ENTERTAINMENT</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CATEGORIES
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <% Category.all.each do |category| %>
+          <%= link_to category.name.upcase, category_path(category), class: 'dropdown-item'%>
+          <% end %>
+        </div>
+      </div>
     </li>
     <li>
       <% unless logged_in? %>

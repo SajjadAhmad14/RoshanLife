@@ -4,7 +4,7 @@
     <div class = 'col-10'>
       <%= form_with(model: @user, class: 'shadow p-3 mb-3 bg-success rounded', local: true) do |f|%>
         <div class = 'form-group row'>
-          <%= f.label :name, 'User Name', class: 'col-2 col-form-label text-light'%>
+          <%= f.label :name, class: 'col-2 col-form-label text-light'%>
           <div class = 'col-10'>
             <%= f.text_field :name, class: 'form-control shadow rounded', placeholder: 'Enter your name'%>
           </div>
