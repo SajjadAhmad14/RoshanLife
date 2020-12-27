@@ -4,12 +4,11 @@
       <a href = "#"><%= image_tag "my_logo1.jpg" %></a>
     </li>
     <li>
-      <a href = '#' class = 'active'>HOME</a>
+      <%= link_to "HOME", {controller: "pages", action: "home"}, class: "active" %>
       <a href = '#'>FASION</a>
       <a href = '#'>BUSINESS</a>
       <a href = '#'>SPORTS</a>
       <a href = '#'>ENTERTAINMENT</a>
-      
     </li>
     <li>
       <% unless logged_in? %>
