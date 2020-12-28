@@ -5,8 +5,11 @@
   <div class="grid-container">
     <% Category.all.each do |category|%>
       <%= link_to category_path(category) do %>
-        <div class = 'box', style="background-image: url(<%=url_for(popular_article.image)%>)";>
+        <div class = 'box', <% if category.articles.exists? %>style="background-image: url(<%=url_for(recent_article(category).image)%>)";<%end%>>
           <h2 class = 'category-head'><%= category.name.capitalize %></h2>
+          <% if category.articles.exists? %>
+          <p class = 'pt-3'><%= recent_article(category).title%></p>
+          <% end %>
         </div>
       <% end %>
     <% end %>

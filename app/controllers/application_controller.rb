@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :popular_article
+  helper_method :current_user, :logged_in?, :popular_article, :recent_article
   def current_user
     @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
   end
@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
   def popular_article
     Article.where(votes_count: Article.maximum(:votes_count)).first
   end
+
+  def recent_article(category)
+    category.articles.last
+  end
+
 end

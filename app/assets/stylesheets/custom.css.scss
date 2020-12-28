@@ -43,8 +43,20 @@ form file {
 
 .sign-up,
 .log-in {
-  height: 70vh;
-  margin-top: 90px;
+  height: 80vh;
+
+}
+@media screen and (max-width: 1024px) {
+  .forms {
+    margin-top: 300px;
+    padding: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .forms {
+    margin-top: 150px;
+  }
 }
 
 .jumbotron {
@@ -83,7 +95,7 @@ form file {
 }
 
 .background {
-  background-image: url('article2.jpg');
+  background-image: url('lifestyle.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -105,7 +117,7 @@ form file {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  background-color: #C0C0C0;
 }
 
 footer {
