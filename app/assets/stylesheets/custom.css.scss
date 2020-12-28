@@ -11,7 +11,7 @@ body {
 }
 
 .nav-main {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
@@ -31,15 +31,18 @@ body {
   margin: 0 100px 0 150px;
 }
 
-.nav-main .active, a:active {
+.nav-main .active,
+a:active {
   color: #f36f21;
 }
 
-form select, form file {
+form select,
+form file {
   width: 100%;
 }
 
-.sign-up, .log-in {
+.sign-up,
+.log-in {
   height: 70vh;
   margin-top: 90px;
 }
@@ -50,8 +53,28 @@ form select, form file {
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 0;
+  color: #fff;
+}
+
+.jumbotron h2 {
+  color: #fa6000;
+  padding-top: 200px;
+}
+
+.jumbotron p {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+  font-size: 1.3rem;
   
 }
+.category-head {
+  text-decoration: underline;
+  text-decoration-color: #fefe00;
+}
+
 
 .footer {
   position: fixed;

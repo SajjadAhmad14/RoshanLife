@@ -1,17 +1,12 @@
   <div class="jumbotron", style="background-image: url(<%=url_for(popular_article.image)%>)";>
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+    <h2 class="display-5 font-weight-bold"><%= popular_article.title %></h2>
+    <p class="lead"><%= popular_article.body %></p>
   </div>
   <div class="grid-container">
     <% Category.all.each do |category|%>
       <%= link_to category_path(category) do %>
         <div class = 'box', style="background-image: url(<%=url_for(popular_article.image)%>)";>
-          <h1><%= category.name %></h1>
+          <h2 class = 'category-head'><%= category.name.capitalize %></h2>
         </div>
       <% end %>
     <% end %>
