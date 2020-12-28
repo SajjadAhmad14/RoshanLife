@@ -8,7 +8,7 @@
         <div class = 'box', <% if category.articles.exists? %>style="background-image: url(<%=url_for(recent_article(category).image)%>)";<%end%>>
           <h2 class = 'category-head'><%= category.name.capitalize %></h2>
           <% if category.articles.exists? %>
-          <p class = 'pt-3'><%= recent_article(category).title%></p>
+          <h4 class = 'pt-5'><%= recent_article(category).title%></h4>
           <% end %>
         </div>
       <% end %>

@@ -1,13 +1,13 @@
 <% if @articles.exists? %>
-  <div class = 'container-fluid'>
-    <div class = 'grid-container'>
-      <% @articles.each do |article| %>
-        <div class = 'box', style="background-image: url(<%=url_for(article.image)%>)";>
-          <h1><%= article.title %></h1>
-          
-        </div>
-      <% end %>
-    </div>
-    <% else  %>
-      <% flash[:notice] = 'No Article to show!' %>
+  <div class = 'grid-container'>
+    <% @articles.each do |article| %>
+      <div class = 'box', style="background-image: url(<%=url_for(article.image)%>)";>
+        <h2 class = 'article-head'><%= article.title %></h2>
+        <p class = 'article-body'><%= article.body %></p>
+        <h3><%= article.user.name.capitalize %></h3>
+      </div>
     <% end %>
+  </div>
+<% else  %>
+  <% flash[:notice] = 'No Article to show!' %>
+<% end %>

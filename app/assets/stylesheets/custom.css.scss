@@ -46,16 +46,25 @@ form file {
   height: 80vh;
 
 }
+
 @media screen and (max-width: 1024px) {
   .forms {
     margin-top: 300px;
-    padding: 100px;
+    padding: 90px;
   }
+
+  .sign-up,
+  .log-in {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
   .forms {
-    margin-top: 150px;
+    margin-top: 100px;
+    padding: 90px;
   }
 }
 
@@ -80,18 +89,19 @@ form file {
   max-height: 3.6em;
   line-height: 1.8em;
   font-size: 1.3rem;
-  
+
 }
+
 .category-head {
   text-decoration: underline;
   text-decoration-color: #fefe00;
 }
 
 
-.footer {
+footer {
   position: fixed;
   bottom: 0;
-
+  width: 100%
 }
 
 .background {
@@ -99,6 +109,7 @@ form file {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-bottom: 0;
 }
 
 .grid-container {
@@ -118,6 +129,20 @@ form file {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #C0C0C0;
+}
+
+.article-head {
+  color: #f99b00;
+  text-decoration: underline;
+  text-decoration-color: #f99b00;
+}
+
+.article-body {
+  height: 30%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  width: 200px;
 }
 
 footer {
