@@ -69,7 +69,7 @@ form file {
 }
 
 .jumbotron {
-  height: 70vh;
+  height: 60vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -143,6 +143,10 @@ footer {
   text-overflow: ellipsis;
   word-wrap: break-word;
   width: 200px;
+}
+
+.fa-thumbs-up {
+  color: #fa6000;
 }
 
 footer {
