@@ -24,7 +24,7 @@
         <div class = 'form-group row'>
           <%= f.label :image, class: 'col-2 col-form-label text-light' %>
           <div class = 'col-10'>
-            <%= f.file_field :image %>
+            <%= f.file_field :image, direct_upload: true %>
           </div>
         </div>
         <%= f.hidden_field :user_id, value: current_user.id %>

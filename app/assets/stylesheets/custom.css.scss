@@ -42,7 +42,7 @@ form file {
 }
 
 .sign-up,
-.log-in {
+.log-in, .new-category {
   height: 80vh;
 
 }
@@ -54,7 +54,7 @@ form file {
   }
 
   .sign-up,
-  .log-in {
+  .log-in, .new-category {
     height: 100vh;
     overflow-y: hidden;
   }
@@ -89,7 +89,7 @@ form file {
   max-height: 3.6em;
   line-height: 1.8em;
   font-size: 1.3rem;
-
+  z-index: 1;
 }
 
 .category-head {

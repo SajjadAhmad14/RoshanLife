@@ -6,6 +6,6 @@ class Article < ApplicationRecord
   has_one_attached :image
   validate :image_type
   def image_type
-    errors.add(:image, 'needs to be a jpeg or png!') unless image.nil? && image.content_type.in?(%('image/jpeg image/png'))
+    errors.add(:image, 'needs to be a jpeg or png!') if !image.nil? && image.content_type.in?(%('image/jpg image/png'))
   end
 end
