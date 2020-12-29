@@ -5,7 +5,7 @@
         <h2 class = 'article-head'><%= article.title %></h2>
         <p class = 'article-body'><%= article.body %></p>
         <h3><%= article.user.name.capitalize %></h3>
-        <% if logged_in? %>
+        <% if logged_in? && !already_voted?(article)%>
           <%= form_with(model: @vote, url: votes_path, local: true) do |form| %>
             <%= form.hidden_field :user_id, class: 'form-control', value: current_user.id %>
             <%= form.hidden_field :article_id, class: 'form-control', value: article.id %>
