@@ -1,11 +1,15 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?
+  helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories
   def current_user
     @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
   end
 
   def logged_in?
     !!current_user
+  end
+
+  def list_categories
+    Category.all.order(priority: :desc)
   end
 
   def popular_article
