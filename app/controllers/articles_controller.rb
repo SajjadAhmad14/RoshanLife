@@ -10,7 +10,8 @@ class ArticlesController < ApplicationController
       flash[:notice] = 'Article created successfully!'
       redirect_to root_path
     else
-      render :new
+      flash[:error]= 'No field should be empty!'
+      redirect_to new_article_path
     end
   end
 
