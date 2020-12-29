@@ -1,0 +1,20 @@
+development:
+  cloud_name: <%= ENV["CLOUD_NAME"]%>
+  api_key: <%= ENV['CLOUD_KEY']%>
+  api_secret: <%= ENV['CLOUD_SECRET']%>
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: <%= ENV["CLOUD_NAME"]%>
+  api_key: <%= ENV['CLOUD_KEY']%>
+  api_secret: <%= ENV['CLOUD_SECRET']%>
+  enhance_image_tag: true
+  static_file_support: true
+  secure: true
+  cdn_subdomain: true
+test:
+  cloud_name: <%= ENV["CLOUD_NAME"]%>
+  api_key: <%= ENV['CLOUD_KEY']%>
+  api_secret: <%= ENV['CLOUD_SECRET']%>
+  enhance_image_tag: true
+  static_file_support: false
