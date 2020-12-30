@@ -26,7 +26,9 @@ class ArticlesController < ApplicationController
   end
 
   def set_user
-    flash[:error] = 'You must log in to create article' unless logged_in?
-    redirect_to login_path
+    unless logged_in?
+      redirect_to login_path
+      flash[:error] = 'You must log in to create article'
+    end
   end
 end

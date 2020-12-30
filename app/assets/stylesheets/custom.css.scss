@@ -37,33 +37,40 @@ a:active {
 }
 
 form select,
-form file {
+form input[type="file"] {
   width: 100%;
 }
 
 .sign-up,
-.log-in, .new-category {
+.log-in,
+.new-category {
   height: 80vh;
-
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 320px) {
   .forms {
-    margin-top: 300px;
+    margin-top: 600px;
     padding: 90px;
   }
 
   .sign-up,
-  .log-in, .new-category {
+  .log-in,
+  .new-category {
     height: 100vh;
     overflow-y: hidden;
   }
+}
 
+@media only screen and (min-device-width: 768px) {
+  .forms {
+    margin-top: 150px;
+    padding: 90px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .forms {
-    margin-top: 50px;
+    margin-top: 70px;
     padding: 90px;
   }
 }
@@ -97,11 +104,15 @@ form file {
   text-decoration-color: #fefe00;
 }
 
-
 footer {
   position: fixed;
   bottom: 0;
-  width: 100%
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4e443e;
+  color: #fff;
 }
 
 .background {
@@ -110,6 +121,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 0;
+  height: 100vh;
 }
 
 .grid-container {
@@ -128,7 +140,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
 }
 
 .article-head {
@@ -145,22 +157,14 @@ footer {
   width: 200px;
 }
 
-button { 
-  border:0; 
-  background:none;
+button {
+  border: 0;
+  background: none;
   outline: none;
 }
 
 .fa-thumbs-up {
   color: #fa6000;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #4e443e;
-  color: #fff;
 }
 
 footer span {
