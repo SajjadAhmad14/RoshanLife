@@ -1,7 +1,9 @@
-  <div class="jumbotron", <% if Article.exists? %>style="background-image: url(<%=url_for(popular_article.image)%>)";<% end %>>
+<% unless popular_article.nil? %>
+  <div class="jumbotron", style="background-image: url(<%=url_for(popular_article.image)%>)";>
     <h2 class="display-5 font-weight-bold"><%= popular_article.title %></h2>
     <p class="lead"><%= popular_article.body %></p>
   </div>
+<% end %>
   <div class="grid-container">
     <% list_categories.each do |category|%>
       <%= link_to category_path(category) do %>
