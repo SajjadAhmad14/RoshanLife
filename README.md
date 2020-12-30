@@ -13,7 +13,7 @@
 - Users can vote articles
 - Admin user can create categories
 
-## Video presentation of the project [here]()
+## Video presentation of the project [here](https://www.loom.com/share/f589c954b270477586916e65e041b9f2)
 
 ## This web app is live, you can check it here: [Live demo](https://roshanlife.herokuapp.com/)
 
@@ -26,7 +26,6 @@
 - Fontawesome
 - Rspec
 - Capybara
-- Bootstrap
 - Rubocop
 - VS Code
 - Google developer tools
@@ -96,7 +95,7 @@ This project is licensed by Microverse and the Odin Project
 
 ##  Acknowledgement
 
-- Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+- Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 - <a href="https://www.microverse.org/" target="_blank">Microverse</a>
 - <a href="https://www.w3schools.com/" target="_blank">w3schools</a> 
 - <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
