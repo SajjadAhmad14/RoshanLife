@@ -1,10 +1,10 @@
-<div class = 'background'>
+<div class = 'background', style="background-image: url(<%= asset_path 'lifestyle.jpg' %>)";>
 <div class = 'container new-category'>
   <div class = 'row justify-content-center'>
     <div class = 'col-10'>
       <%= form_with(model: @category, class: 'shadow forms bg-secondary', local: true) do |f|%>
         <div class = 'form-group row'>
-          <%= f.label :name, 'Category name', class: 'col-2 col-form-label text-light'%>
+          <%= f.label :name, class: 'col-2 col-form-label text-light'%>
           <div class = 'col-10'>
             <%= f.text_field :name, class: 'form-control shadow rounded', placeholder: 'Enter name for Category'%>
           </div>

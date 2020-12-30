@@ -10,8 +10,8 @@ class CategoriesController < ApplicationController
       flash[:notice] = 'Category created successfully!'
       redirect_to root_path
     else
-      flash[:notice] = @category.errors.full_messages
-      render 'new'
+      redirect_to new_category_path
+      flash[:error] = 'No field can be blank!'
     end
   end
 
