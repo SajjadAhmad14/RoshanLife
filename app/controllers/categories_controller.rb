@@ -27,9 +27,7 @@ class CategoriesController < ApplicationController
   end
 
   def require_admin
-    if logged_in? && current_user.admin?
-      render 'new'
-    else
+    unless logged_in? && current_user.admin
       redirect_to root_path
       flash[:error] = 'Only admin can perform this action!'
     end
