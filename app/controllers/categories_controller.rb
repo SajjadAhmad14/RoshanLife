@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
       render 'new'
     end
   end
-  
+
   def show
     @category = Category.includes(:articles).find(params[:id])
     @articles = @category.articles.order(created_at: :desc)
@@ -27,10 +27,7 @@ class CategoriesController < ApplicationController
   end
 
   def require_admin
-    if !(logged_in? && current_user.admin?)
-      flash[:alert] = 'Only admin can perform action!'
-      redirect_to root_path
-    end
+    flash[:alert] = 'Only admin can perform action!' unless logged_in? && current_user.admin?
+    redirect_to root_path
   end
 end
-

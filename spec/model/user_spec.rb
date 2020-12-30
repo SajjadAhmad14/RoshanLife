@@ -1,8 +1,8 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe User, :type => :model do
+RSpec.describe User, type: :model do
   it 'User is valid if a name attribute is present' do
-    user = User.new(name: 'abc', password:'12345')
+    user = User.new(name: 'abc', password: '12345')
     expect(user).to be_valid
   end
 
@@ -18,5 +18,4 @@ RSpec.describe User, :type => :model do
   it 'User has many votes' do
     expect(User.reflect_on_association(:articles).macro).to eq(:has_many)
   end
-
 end

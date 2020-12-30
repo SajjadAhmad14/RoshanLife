@@ -19,18 +19,14 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
   private
 
   def article_params
     params.require(:article).permit(:title, :body, :category_id, :image, :user_id)
   end
-  
-  def set_user
-    if !(logged_in?)
-      flash[:error] = 'You must log in to create article'
-      redirect_to login_path
-    end
-  end
 
+  def set_user
+    flash[:error] = 'You must log in to create article' unless logged_in?
+    redirect_to login_path
+  end
 end

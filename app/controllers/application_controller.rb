@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def recent_article(category)
     category.articles.last
   end
-  
+
   def already_voted?(article)
     current_user.votes.pluck(:article_id).include?(article.id)
   end
