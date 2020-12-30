@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = 'No field should be empty!'
-      # redirect_to new_article_path
+      redirect_to new_article_path
     end
   end
 
@@ -27,8 +27,8 @@ class ArticlesController < ApplicationController
 
   def set_user
     unless logged_in?
-      flash[:error] = 'User must exist!'
       redirect_to login_path
+      flash[:error] = 'User must be logged in to create an article!'
     end
   end
 end
