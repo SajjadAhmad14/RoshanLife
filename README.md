@@ -1,6 +1,8 @@
 ![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) ![](https://img.shields.io/badge/-Microverse%20projects-blueviolet)
 
-# Roshan LIfe is an app where users can signup, publish articles and vote other articles.
+# Roshan LIfe 
+
+This is an app where users can signup, publish articles and vote other articles.
 
 > In this project, we were required to build an article app where users can sign-up/sign-in/sign out, create articles, and vote other users's articles. The project enforced our skills in using most of the core functionalities of the Rails framework.
 <br>
@@ -56,11 +58,11 @@ Run `yarn install` to install the npm packages from the `package.json` file.<br>
 Open `.env` file and add your credenatials for your postgres<br>
 `POSTGRES_USER: example` <br>
 `POSTGRES_PASSWORD: password`<br>
-**Step 7**<br>
+**Step 6**<br>
 Run `rails db:create` and `rails db:migrate` to create and migrate the database tabels and associations.<br>
-**Step 8**<br>
+**Step 7**<br>
 Run `rails s` to start the rails server.<br>
-**Step 9**<br>
+**Step 8**<br>
 Now you can visit the app at `http://localhost:3000`.<br>
 
 ## Tests
