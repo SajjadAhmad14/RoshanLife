@@ -23,10 +23,5 @@ class ApplicationController < ActionController::Base
   def already_voted?(article)
     current_user.votes.pluck(:article_id).include?(article.id)
   end
-
-  def show_thumb?(article)
-    if logged_in? && !already_voted?(article)
-      render partial: 'votes/vote_form', locals: { article: article }
-    end
-  end
+  
 end
