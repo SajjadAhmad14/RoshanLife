@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories
+  helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories, :show_thumb?
   def current_user
     @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
   end
@@ -22,5 +22,11 @@ class ApplicationController < ActionController::Base
 
   def already_voted?(article)
     current_user.votes.pluck(:article_id).include?(article.id)
+  end
+
+  def show_thumb?(article)
+    if logged_in? && !already_voted?(article)
+      render partial: 'votes/vote_form', locals: { article: article }
+    end
   end
 end
