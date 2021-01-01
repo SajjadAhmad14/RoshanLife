@@ -10,34 +10,8 @@
   </head>
   <body>
     <%= render 'layouts/navigation' %>
-    <% flash.each do |key, msg| %>
-      <div class = 'text-center'>
-        <% if flash[:error] %>
-          <div class="alert alert-danger mb-0"<%= key %> alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <%= msg %>
-          </div>
-        <% else %>
-          <div class="alert alert-success mb-0"<%= key %> alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <%= msg %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+    <%= render 'layouts/flash_style'%>
     <%= yield %>
-    <footer class = 'p-lg-2'>
-      <%= link_to root_path do %>
-        <%= image_tag "my_logo1.jpg" %>
-      <% end %>
-      <div>
-        <div><span>Privacy Policy Termes&Conditions</span> © 2020 Copyright: All rights reserved </div>
-      </div>
-      <div>Contact Us:
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook-f"></i>
-      </div>
-    </footer>
+    <%= render 'layouts/footer'%>
   </body>
 </html>
