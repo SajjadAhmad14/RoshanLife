@@ -7,9 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
+      flash[:notice] = 'Welcome to Roshan Life!'
       redirect_to root_path
     else
-      flash[:error] = 'Action faild! Try again!'
+      flash[:error] = @user.errors.full_messages.to_sentence
       redirect_to new_user_path
     end
   end

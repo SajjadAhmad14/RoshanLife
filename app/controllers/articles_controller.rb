@@ -7,11 +7,11 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notice] = 'Article created successfully!'
+      flash[:notice] = 'Article published successfully!'
       redirect_to root_path
     else
       redirect_to new_article_path
-      flash[:error] = 'No field should be empty!'
+      flash[:error] = @article.errors.full_messages.to_sentence
     end
   end
 

@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
       redirect_to root_path
     else
       redirect_to new_category_path
-      flash[:error] = 'No field can be blank!'
+      flash[:error] = @category.errors.full_messages.to_sentence
     end
   end
 
