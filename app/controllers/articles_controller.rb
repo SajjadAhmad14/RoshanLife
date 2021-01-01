@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_user, only: [:new, :create]
+  before_action :set_user, only: %i[new create]
   def new
     @article = Article.new
   end
@@ -26,9 +26,6 @@ class ArticlesController < ApplicationController
   end
 
   def set_user
-    unless logged_in?
-      redirect_to login_path
-      flash[:error] = 'User must be logged in to create an article!'
-    end
+    redirect_to login_path unless logged_in?
   end
 end
