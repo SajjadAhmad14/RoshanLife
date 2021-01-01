@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_user
+  before_action :set_user, only: [:new, :create]
   def new
     @article = Article.new
   end

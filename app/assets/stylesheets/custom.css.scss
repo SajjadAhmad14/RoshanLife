@@ -1,5 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap';
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
@@ -212,4 +212,9 @@ footer span {
 }
 .article-author {
   color: #000;
+}
+
+.article-face {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
