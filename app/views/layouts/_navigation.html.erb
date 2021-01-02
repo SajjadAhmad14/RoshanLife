@@ -2,7 +2,7 @@
   <ul class = "nav-main">
     <li>
       <%= link_to root_path, class: "ml-lg-5" do %>
-      <%= image_tag "my_logo1.jpg" %>
+        <%= image_tag "my_logo1.jpg" %>
       <% end %>
     </li>
     <li>
@@ -11,8 +11,8 @@
           CATEGORIES
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <% Category.all.each do |category| %>
-          <%= link_to category.name.upcase, category_path(category), class: 'dropdown-item'%>
+          <% Category.all.each do |category| %>
+            <%= link_to category.name.upcase, category_path(category), class: 'dropdown-item'%>
           <% end %>
         </div>
       </div>

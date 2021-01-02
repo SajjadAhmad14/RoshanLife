@@ -1,38 +1,38 @@
 <div class = 'background', style="background-image: url(<%= asset_path 'lifestyle.jpg' %>)";>
-<div class = 'container'>
-  <div class = 'row justify-content-center'>
-    <div class = 'col-10'>
-      <%= form_with(model: @article, class: 'shadow p-3 mb-3 bg-secondary rounded', local: true) do |f|%>
-        <div class = 'form-group row'>
-          <%= f.label :title, class: 'col-2 col-form-label text-light'%>
-          <div class = 'col-10'>
-            <%= f.text_field :title, class: 'form-control shadow rounded', placeholder: 'Enter title here'%>
+  <div class = 'container'>
+    <div class = 'row justify-content-center'>
+      <div class = 'col-10'>
+        <%= form_with(model: @article, class: 'shadow p-3 mb-3 bg-secondary rounded', local: true) do |f|%>
+          <div class = 'form-group row'>
+            <%= f.label :title, class: 'col-2 col-form-label text-light'%>
+            <div class = 'col-10'>
+              <%= f.text_field :title, class: 'form-control shadow rounded', placeholder: 'Enter title here'%>
+            </div>
           </div>
-        </div>
-        <div class = 'form-group row'>
-          <%= f.label :body, class: 'col-2 col-form-label text-light'%>
-          <div class = 'col-10'>
-            <%= f.text_area :body, rows: 10, class: 'form-control shadow rounded'%>
+          <div class = 'form-group row'>
+            <%= f.label :body, class: 'col-2 col-form-label text-light'%>
+            <div class = 'col-10'>
+              <%= f.text_area :body, rows: 10, class: 'form-control shadow rounded'%>
+            </div>
           </div>
-        </div>
-        <div class = 'form-group row'>
-          <%= f.label :category, class: 'col-2 col-form-label text-light'%>
-          <div class = 'col-10'>
-            <%= f.collection_select(:category_id, Category.all, :id, :name)%>
+          <div class = 'form-group row'>
+            <%= f.label :category, class: 'col-2 col-form-label text-light'%>
+            <div class = 'col-10'>
+              <%= f.collection_select(:category_id, Category.all, :id, :name)%>
+            </div>
           </div>
-        </div>
-        <div class = 'form-group row'>
-          <%= f.label :image, class: 'col-2 col-form-label text-light' %>
-          <div class = 'col-10'>
-            <%= f.file_field :image, direct_upload: true %>
+          <div class = 'form-group row'>
+            <%= f.label :image, class: 'col-2 col-form-label text-light' %>
+            <div class = 'col-10'>
+              <%= f.file_field :image, direct_upload: true %>
+            </div>
           </div>
-        </div>
-        <%= f.hidden_field :user_id, value: current_user.id %>
-        <div class = 'form-group row justify-content-center'>
-          <%= f.submit class: 'btn btn-outline-light btn-lg' %>
-        </div>
-      <% end %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <div class = 'form-group row justify-content-center'>
+            <%= f.submit class: 'btn btn-outline-light btn-lg' %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 </div>
