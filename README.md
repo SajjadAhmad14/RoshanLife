@@ -15,7 +15,7 @@ This is an app where users can signup, publish articles and vote other articles.
 - Users can vote articles
 - Admin user can create categories
 
-## Video presentation of the project [here](https://www.loom.com/share/f589c954b270477586916e65e041b9f2)
+## Video presentation of the project [here](https://www.loom.com/share/310a350219ff49fe8afa95e83ebd63c0)
 
 ## This web app is live, you can check it here: [Live demo](https://roshanlife.herokuapp.com/)
 
