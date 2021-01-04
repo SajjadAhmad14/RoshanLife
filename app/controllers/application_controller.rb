@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories,
-                :homepage_background, :article_info
+                :homepage_background, :article_info, :show_vote
   def current_user
     @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
   end
@@ -31,5 +31,9 @@ class ApplicationController < ActionController::Base
 
   def article_info
     render partial: 'article_container' if @articles.exists?
+  end
+  
+  def show_vote(article)
+    render partial: 'votes/vote_form', locals: { article: article } if logged_in? && !already_voted?(article)
   end
 end
