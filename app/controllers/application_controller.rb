@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories,
-                :show_thumb?
+                :homepage_background
   def current_user
     @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
   end
@@ -24,4 +24,9 @@ class ApplicationController < ActionController::Base
   def already_voted?(article)
     current_user.votes.pluck(:article_id).include?(article.id)
   end
+
+  def homepage_background
+    render partial: 'article_back' unless popular_article.nil?
+  end
+
 end
