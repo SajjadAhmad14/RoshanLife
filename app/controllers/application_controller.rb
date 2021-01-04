@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   def article_info
     render partial: 'article_container' if @articles.exists?
   end
-  
+
   def show_vote(article)
     render partial: 'votes/vote_form', locals: { article: article } if logged_in? && !already_voted?(article)
   end
