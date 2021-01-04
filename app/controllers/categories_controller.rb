@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.includes(:articles).find(params[:id])
-    @articles = @category.articles.order(created_at: :desc)
+    @articles = @category.articles.includes(:votes).order(created_at: :desc)
   end
 
   private
