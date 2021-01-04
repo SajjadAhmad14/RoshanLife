@@ -17,6 +17,8 @@ This is an app where users can signup, publish articles and vote other articles.
 
 ## Video presentation of the project [here](https://www.loom.com/share/310a350219ff49fe8afa95e83ebd63c0)
 
+## Video about N+1 problem and its solution[here](https://www.loom.com/share/7d327940c49b43609112d98a026c18e1)
+
 ## This web app is live, you can check it here: [Live demo](https://roshanlife.herokuapp.com/)
 
 ## Built With
