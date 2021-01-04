@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories,
-                :homepage_background
+                :homepage_background, :article_info
   def current_user
     @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
   end
@@ -29,4 +29,7 @@ class ApplicationController < ActionController::Base
     render partial: 'article_back' unless popular_article.nil?
   end
 
+  def article_info
+    render partial: 'article_container' if @articles.exists?
+  end
 end
