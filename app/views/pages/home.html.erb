@@ -4,7 +4,7 @@
     <%= link_to category_path(category) do %>
       <div class = 'box', <% if category.articles.exists? %>style="background-image: url(<%=url_for(recent_article(category).image)%>)";<%end%>>
         <h2 class = 'category-head'><%= category.name.capitalize %></h2>
-        <%= checkArticle(category) %>
+        <%= check_article(category) %>
       </div>
     <% end %>
   <% end %>
