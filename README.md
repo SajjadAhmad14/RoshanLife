@@ -35,6 +35,7 @@ This is an app where users can signup, publish articles and vote other articles.
 - Google developer tools
 - Git and GitHub
 - Heroku
+- Cloudinary
 - A lot of love
 
 ## Prerequisities
