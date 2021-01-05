@@ -4,4 +4,3 @@ production:
   api_secret: <%= ENV['CLOUD_SECRET']%>
   secure: true
   cdn_subdomain: true
-
