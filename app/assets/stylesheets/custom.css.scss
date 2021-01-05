@@ -129,6 +129,7 @@ footer {
   color: #444;
   grid-template-rows: auto;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
   width: 100%;
 }
 
@@ -147,6 +148,7 @@ footer {
   display: grid;
   color: #444;
   grid-template-rows: auto;
+  grid-gap: 2px;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
 }
