@@ -2,6 +2,8 @@ development:
   cloud_name: <%= ENV["CLOUD_NAME"]%>
   api_key: <%= ENV['CLOUD_KEY']%>
   api_secret: <%= ENV['CLOUD_SECRET']%>
+  enhance_image_tag: 'true'
+  static_file_support: 'false'
   secure: true
   cdn_subdomain: true
 test:
@@ -10,9 +12,14 @@ test:
   api_secret: <%= ENV['CLOUD_SECRET']%>
   secure: true
   cdn_subdomain: true
+  enhance_image_tag: 'true'
+  static_file_support: 'false'
+
 production:
   cloud_name: <%= ENV["CLOUD_NAME"]%>
   api_key: <%= ENV['CLOUD_KEY']%>
   api_secret: <%= ENV['CLOUD_SECRET']%>
   secure: true
   cdn_subdomain: true
+  enhance_image_tag: 'true'
+  static_file_support: 'false'
