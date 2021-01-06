@@ -5,7 +5,7 @@
         </div>
         <div class = 'article-text'>
           <h2 class = 'pl-2'><%= link_to article.title, article, class: 'article-head' %></h2>
-          <p class = 'article-body pl-2'><%= article.body %></p>
+          <p class = 'article-body pl-2'><%= truncate_body(article) %></p>
           <% if logged_in? && !already_voted?(article) %>
             <%= render 'votes/vote_form', article: article%>
           <% end %>

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories,
-                :homepage_background, :article_info, :show_vote
+                :homepage_background, :article_info, :truncate_body
   def current_user
     @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
   end
@@ -35,5 +35,9 @@ class ApplicationController < ActionController::Base
 
   def show_vote(article)
     render partial: 'votes/vote_form', locals: { article: article } if logged_in? && !already_voted?(article)
+  end
+
+  def truncate_body(article)
+    article.body.split.first(6).join(' ')
   end
 end
