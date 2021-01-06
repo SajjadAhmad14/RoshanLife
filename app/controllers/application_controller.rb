@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :popular_article, :recent_article, :list_categories,
                 :homepage_background, :article_info, :truncate_body
-  
   def list_categories
     Category.all.order(priority: :desc)
   end
@@ -12,10 +11,6 @@ class ApplicationController < ActionController::Base
 
   def recent_article(category)
     category.articles.last
-  end
-
-  def already_voted?(article)
-    current_user.votes.pluck(:article_id).include?(article.id)
   end
 
   def homepage_background

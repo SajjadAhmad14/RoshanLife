@@ -18,18 +18,11 @@
       </div>
     </li>
     <li>
-      <% unless logged_in? %>
-        <%= link_to 'LOGIN', login_path %> |
-        <%= link_to 'REGISTER', new_user_path %>
-      <% end %>
-      <% if logged_in? %>
-        <% if current_user.admin? %>
-          <%= link_to 'CREATE CATEGORY', new_category_path %> |
-        <% else  %>
-          <%= link_to 'CREATE ARTICLE', new_article_path %> |
-        <% end %>
-        <%= link_to 'LOGOUT', logout_path, :method => :delete %>
-      <% end %>
+      <%= login_link %>
+      <%= register_link %>
+      <%= category_link %>
+      <%= article_link %>
+      <%= logout_link %>
     </li>
     <ul>
     </nav>

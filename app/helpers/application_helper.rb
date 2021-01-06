@@ -19,4 +19,23 @@ module ApplicationHelper
     render partial: 'votes/vote_form', locals: { article: article } if logged_in? && !already_voted?(article)
   end
 
+  def login_link
+    render partial: 'layouts/login' unless logged_in? 
+  end
+
+  def register_link
+    render partial: 'layouts/register' unless logged_in? 
+  end
+
+  def category_link
+    render partial: 'layouts/category_create' if logged_in? && current_user.admin?
+  end
+
+  def article_link
+    render partial: 'layouts/article_create' if logged_in? && !current_user.admin?
+  end
+
+  def logout_link
+    render partial: 'layouts/logout' if logged_in?
+  end
 end
