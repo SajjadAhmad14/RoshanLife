@@ -38,4 +38,13 @@ module ApplicationHelper
   def logout_link
     render partial: 'layouts/logout' if logged_in?
   end
+
+  def show_msg(key, msg)
+    if flash[:error]
+      render partial: 'layouts/flash_error', locals: { key: key, msg: msg }
+    else
+      render partial: 'layouts/flash_success', locals: { key: key, msg: msg }
+    end
+  end
+
 end
