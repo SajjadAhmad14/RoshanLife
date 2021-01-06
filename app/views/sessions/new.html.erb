@@ -1,0 +1,25 @@
+<div class = 'background pt-0', style="background-image: url(<%= asset_path 'lifestyle.jpg' %>)";>
+  <div class = 'container log-in'>
+    <div class = 'row justify-content-center'>
+      <div class = 'col-10'>
+        <%= form_with scope: :session, url: login_path, local: true, class: 'shadow forms bg-secondary rounded' do |f|%>
+          <div class = 'form-group row'>
+            <%= f.label :name, class: 'col-2 col-form-label text-light'%>
+            <div class = 'col-10'>
+              <%= f.text_field :name, class: 'form-control shadow rounded', placeholder: 'Enter your name'%>
+            </div>
+          </div>
+          <div class = 'form-group row'>
+            <%= f.label :password, class: 'col-2 col-form-label text-light'%>
+            <div class = 'col-10'>
+              <%= f.password_field :password, class: 'form-control shadow rounded', placeholder: 'Enter your password'%>
+            </div>
+          </div>
+          <div class = 'form-group row justify-content-center'>
+            <%= f.submit 'Log In', class: 'btn btn-outline-light btn-lg' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

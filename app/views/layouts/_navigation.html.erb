@@ -1,0 +1,28 @@
+<nav>
+  <ul class = "nav-main">
+    <li>
+      <%= link_to root_path, class: "ml-lg-5" do %>
+        <%= image_tag "my_logo1.jpg" %>
+      <% end %>
+    </li>
+    <li>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CATEGORIES
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% Category.all.each do |category| %>
+            <%= link_to category.name.upcase, category_path(category), class: 'dropdown-item'%>
+          <% end %>
+        </div>
+      </div>
+    </li>
+    <li>
+      <%= login_link %>
+      <%= register_link %>
+      <%= category_link %>
+      <%= article_link %>
+      <%= logout_link %>
+    </li>
+    <ul>
+    </nav>

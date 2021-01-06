@@ -1,0 +1,11 @@
+<%= homepage_background %>
+<div class="grid-container">
+  <% list_categories.each do |category|%>
+    <%= link_to category_path(category) do %>
+      <div class = 'box', <% if category.articles.exists? %>style="background-image: url(<%=url_for(recent_article(category).image)%>)";<%end%>>
+        <h2 class = 'category-head'><%= category.name.capitalize %></h2>
+        <%= check_article(category) %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
