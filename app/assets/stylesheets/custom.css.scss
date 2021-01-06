@@ -71,9 +71,8 @@ form input[type="file"] {
   }
 
   .article-form {
-  margin-top: 400px;
-}
-
+    margin-top: 400px;
+  }
 }
 
 @media only screen and (min-device-width: 768px) {
@@ -96,23 +95,20 @@ form input[type="file"] {
     margin-top: 70px;
     padding: 90px;
   }
-  
+
   .jumbotron {
     height: 71vh;
   }
 
   .article-form {
-    margin-top: 0
+    margin-top: 0;
   }
-
 }
 
 @media screen and (min-width: 1440px) {
-  
   .jumbotron {
     height: 80vh;
   }
-
 
   .article-form {
     margin-top: 400px;
