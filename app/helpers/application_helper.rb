@@ -1,4 +1,4 @@
-module ApplicationHelper  
+module ApplicationHelper
   def logged_in?
     current_user ? true : false
   end
@@ -20,11 +20,11 @@ module ApplicationHelper
   end
 
   def login_link
-    render partial: 'layouts/login' unless logged_in? 
+    render partial: 'layouts/login' unless logged_in?
   end
 
   def register_link
-    render partial: 'layouts/register' unless logged_in? 
+    render partial: 'layouts/register' unless logged_in?
   end
 
   def category_link
@@ -46,5 +46,4 @@ module ApplicationHelper
       render partial: 'layouts/flash_success', locals: { key: key, msg: msg }
     end
   end
-
 end
