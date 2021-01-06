@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  include ApplicationHelper
   before_action :set_user, only: %i[new create]
   def new
     @article = Article.new

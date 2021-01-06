@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  include ApplicationHelper
   before_action :require_admin, except: [:show]
   def new
     @category = Category.new

@@ -1,14 +1,7 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :popular_article, :recent_article, :already_voted?, :list_categories,
+  helper_method :popular_article, :recent_article, :list_categories,
                 :homepage_background, :article_info, :truncate_body
-  def current_user
-    @current_user ||= session[:user_id] ? User.find(session[:user_id]) : false
-  end
-
-  def logged_in?
-    current_user ? true : false
-  end
-
+  
   def list_categories
     Category.all.order(priority: :desc)
   end
@@ -31,10 +24,6 @@ class ApplicationController < ActionController::Base
 
   def article_info
     render partial: 'article_container' if @articles.exists?
-  end
-
-  def show_vote(article)
-    render partial: 'votes/vote_form', locals: { article: article } if logged_in? && !already_voted?(article)
   end
 
   def truncate_body(article)
